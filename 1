@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+struct book {
+	char name[20];
+	int price;
+};
+int main() {
+	struct book b = { "sheji",55 };
+	/*printf("shuming%s\n", b.name);
+	printf("jiage%dyuan\n", b.price);*/
+	struct book* pb = &b;
+	/*printf("shuming%s\n", (*pb).name);
+	printf("jiage%dyuan\n", (*pb).price);*/
+	printf("shuming%s\n", pb->name);
+	printf("jiage%dԪ\n", pb->price);
+	strcpy(b.name, "c++");//strcpy——string copy_字符串拷贝_库函数——string.h(更改数组名字)
+	b.price = 15;//直接更改 
+	return 0;
+}
